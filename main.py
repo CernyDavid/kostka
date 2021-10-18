@@ -8,7 +8,11 @@ input.on_button_pressed(Button.A, stisknutoA)
 desetsten = 0
 def stisknutoB():
     global desetsten
-    desetsten = 1
+    if desetsten == 0:
+        global desetsten
+        desetsten = 1
+    else:
+        desetsten = 0
 input.on_button_pressed(Button.B, stisknutoB)
 number = 0
 def hod():

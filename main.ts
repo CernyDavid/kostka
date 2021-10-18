@@ -6,7 +6,13 @@ input.onButtonPressed(Button.A, function stisknutoA() {
 let desetsten = 0
 input.onButtonPressed(Button.B, function stisknutoB() {
     
-    desetsten = 1
+    if (desetsten == 0) {
+        
+        desetsten = 1
+    } else {
+        desetsten = 0
+    }
+    
 })
 let number = 0
 input.onGesture(Gesture.Shake, function hod() {
