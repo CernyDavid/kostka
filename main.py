@@ -5,9 +5,12 @@ def stisknutoA():
     global povoleno
     povoleno = 1
 input.on_button_pressed(Button.A, stisknutoA)
-
+desetsten = 0
+def stisknutoB():
+    global desetsten
+    desetsten = 1
+input.on_button_pressed(Button.B, stisknutoB)
 number = 0
-
 def hod():
     if povoleno == 1:
         global number
