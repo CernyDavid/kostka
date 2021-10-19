@@ -17,98 +17,14 @@ input.onButtonPressed(Button.B, function stisknutoB() {
 let number = 0
 input.onGesture(Gesture.Shake, function hod() {
     let index: number;
-    if (desetsten == "false") {
-        if (povoleno == "true") {
-            
+    if (povoleno == "true") {
+        
+        if (desetsten == "true") {
+            number = randint(1, 10)
+        } else {
             number = randint(1, 6)
-            if (number == 1) {
-                basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . # . .
-                . . . . .
-                . . . . .
-                `)
-                music.playTone(330, music.beat(BeatFraction.Whole))
-                
-                povoleno = "false"
-            } else if (number == 2) {
-                basic.showLeds(`
-                    . . . . .
-                    . # . . .
-                    . . . . .
-                    . . . # .
-                    . . . . .
-                    `)
-                for (index = 0; index < 2; index++) {
-                    music.playTone(330, music.beat(BeatFraction.Whole))
-                    basic.pause(500)
-                }
-                
-                povoleno = "false"
-            } else if (number == 3) {
-                basic.showLeds(`
-                        # . . . .
-                        . . . . .
-                        . . # . .
-                        . . . . .
-                        . . . . #
-                        `)
-                for (index = 0; index < 3; index++) {
-                    music.playTone(330, music.beat(BeatFraction.Whole))
-                    basic.pause(500)
-                }
-                
-                povoleno = "false"
-            } else if (number == 4) {
-                basic.showLeds(`
-                            . . . . .
-                            . # . # .
-                            . . . . .
-                            . # . # .
-                            . . . . .
-                            `)
-                for (index = 0; index < 4; index++) {
-                    music.playTone(330, music.beat(BeatFraction.Whole))
-                    basic.pause(500)
-                }
-                
-                povoleno = "false"
-            } else if (number == 5) {
-                basic.showLeds(`
-                                . . . . .
-                                . # . # .
-                                . . # . .
-                                . # . # .
-                                . . . . .
-                                `)
-                for (index = 0; index < 5; index++) {
-                    music.playTone(330, music.beat(BeatFraction.Whole))
-                    basic.pause(500)
-                }
-                
-                povoleno = "false"
-            } else {
-                basic.showLeds(`
-                                . # . # .
-                                . . . . .
-                                . # . # .
-                                . . . . .
-                                . # . # .
-                                `)
-                for (index = 0; index < 6; index++) {
-                    music.playTone(330, music.beat(BeatFraction.Whole))
-                    basic.pause(500)
-                }
-                
-                povoleno = "false"
-            }
-            
         }
         
-    } else if (povoleno == "true") {
-        
-        number = randint(1, 10)
         if (number == 1) {
             basic.showLeds(`
                     . . . . .
