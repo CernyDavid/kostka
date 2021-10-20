@@ -188,6 +188,3 @@ input.onGesture(Gesture.Shake, function hod() {
     }
     
 })
-basic.forever(function on_forever() {
-    
-})

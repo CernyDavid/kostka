@@ -1,7 +1,4 @@
-def on_forever():
-    pass
 povoleno = "false"
-
 def stisknutoA():
     global povoleno
     povoleno = "true"
@@ -179,7 +176,5 @@ def hod():
                                                     music.play_tone(330, music.beat(BeatFraction.WHOLE))
                                                     basic.pause(500)
                                                 global povoleno
-                                                povoleno = "false"                                 
-                                      
+                                                povoleno = "false"                                                
 input.on_gesture(Gesture.SHAKE, hod)
-basic.forever(on_forever)
