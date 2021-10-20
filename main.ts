@@ -2,15 +2,36 @@ let povoleno = "false"
 input.onButtonPressed(Button.A, function stisknutoA() {
     
     povoleno = "true"
+    basic.showLeds(`
+    . . . . .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
 })
 let desetsten = "false"
 input.onButtonPressed(Button.B, function stisknutoB() {
     if (desetsten == "false") {
         
         desetsten = "true"
+        basic.showLeds(`
+        # . . # .
+        # . # . #
+        # . # . #
+        # . # . #
+        # . . # .
+        `)
     } else {
         
         desetsten = "false"
+        basic.showLeds(`
+        . # # # .
+        . # . . .
+        . # # # .
+        . # . # .
+        . # # # .
+        `)
     }
     
 })

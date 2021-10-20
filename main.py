@@ -5,15 +5,36 @@ povoleno = "false"
 def stisknutoA():
     global povoleno
     povoleno = "true"
+    basic.show_leds("""
+    . . . . .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    """)
 input.on_button_pressed(Button.A, stisknutoA)
 desetsten = "false"
 def stisknutoB():
     if desetsten == "false":
         global desetsten
         desetsten = "true"
+        basic.show_leds("""
+        # . . # .
+        # . # . #
+        # . # . #
+        # . # . #
+        # . . # .
+        """)
     else:
         global desetsten
         desetsten = "false"
+        basic.show_leds("""
+        . # # # .
+        . # . . .
+        . # # # .
+        . # . # .
+        . # # # .
+        """)
 input.on_button_pressed(Button.B, stisknutoB)
 number = 0
 def hod():
